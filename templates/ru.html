@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SurvivalCraft — Ванильное Выживание (SMP)</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>SurvivalCraft</h1>
+        <p>Лучший опыт выживания в стиле SMP</p>
+    </header>
+    <div class="button-container">
+        <button onclick="window.location.href='https://discord.gg/TJFEGusk8H'">Вступить в наш Discord</button>
+        <button onclick="window.location.href='/'">English edition of site | Английская версия сайта</button>
+    </div>
+    <main>
+        <section class="hero">
+            <h2>Добро пожаловать на SurvivalCraft</h2>
+            <p>Присоединяйтесь к нашему процветающему сообществу в чистом выживании. Стройте, исследуйте и выживайте вместе!</p>
+            <div class="server-ip">
+                <span>IP сервера (java):</span> <code>mc.12345em.ru:10012</code>
+                <span>IP сервера (bedrock):</span> <code>mc.12345em.ru</code>
+                <p>Внимание: порт Bedrock — 19132</p>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="feature">
+                <h3>Ванильное Выживание</h3>
+                <p>Классическое выживание, близкое к ванильному, с упором на сообщество и сотрудничество.</p>
+            </div>
+            <div class="feature">
+                <h3>Активное сообщество</h3>
+                <p>Дружелюбные и преданные игроки уже ждут вас.</p>
+            </div>
+            <div class="feature">
+                <h3>Без гриферства</h3>
+                <p>Защищенные территории и строгие правила для обеспечения честной игры.</p>
+            </div>
+        </section>
+    </main>
+    <div class="instructions-section">
+        <h2>Инструкция по подключению (Bedrock/Телефон/ПК)</h2>
+        <ol>
+            <li>Откройте Minecraft Bedrock Edition.</li>
+            <li>Нажмите "Играть".</li>
+            <li>Нажмите "Серверы".</li>
+            <li>Нажмите "Добавить сервер".</li>
+            <li>Добавьте новый сервер с указанным IP-адресом.</li>
+            <li>Заходите на сервер и начинайте свое приключение!</li>
+        </ol>
+    </div>
+    <div class="instructions-section">
+        <h2>Инструкция по подключению (Bedrock/Телефон/ПК) (Второй Способ)</h2>
+        <ol>
+            <li>Откройте Minecraft Bedrock Edition.</li>
+            <li>Нажмите "Играть".</li>
+            <li>Нажмите "Друзья".</li>
+            <li>Нажмите "Найти игроков".</li>
+            <li>Добавьте друга под названием Coolpython50.</li>
+            <li>Заходите в мир и начинайте свое приключение!</li>
+        </ol>
+    </div>
+    <div class="instructions-section">
+        <h2>Инструкция по подключению (Java/ПК)</h2>
+        <ol>
+            <li>Откройте Minecraft Java Edition.</li>
+            <li>Перейдите в меню сетевой игры.</li>
+            <li>Добавьте новый сервер, используя указанный IP-адрес и порт.</li>
+            <li>Подключайтесь к серверу и наслаждайтесь игрой!</li>
+        </ol>
+    </div>
+    <footer>
+        <p>&copy; 2026 SurvivalCraft. Не является официальным продуктом Minecraft.</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.server-ip code').forEach(element => {
+            element.addEventListener('click', function() {
+                const text = this.textContent;
+                navigator.clipboard.writeText(text).then(function() {
+                    // Add pulse animation
+                    element.classList.add('copied');
+                    
+                    // Show notification
+                    const notification = document.createElement('div');
+                    notification.className = 'copy-notification';
+                    notification.textContent = '✓ IP скопирован!';
+                    document.body.appendChild(notification);
+                    
+                    setTimeout(() => {
+                        element.classList.remove('copied');
+                    }, 600);
+                    
+                    setTimeout(() => {
+                        notification.remove();
+                    }, 2000);
+                }).catch(function(err) {
+                    console.error('Failed to copy:', err);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

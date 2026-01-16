@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SurvivalCraft - Survival SMP</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>SurvivalCraft</h1>
+        <p>The Ultimate Survival SMP Experience</p>
+    </header>
+    <div class="button-container">
+        <button onclick="window.location.href='https://discord.gg/TJFEGusk8H'">Join our Discord</button>
+        <button onclick="window.location.href='/ru'">Russian edition of site | Русская версия сайта</button>
+    </div>
+    <main>
+        <section class="hero">
+            <h2>Welcome to SurvivalCraft</h2>
+            <p>Join our thriving community in a pure Survival SMP environment. Build, explore, and survive together!</p>
+            <div class="server-ip">
+                <span>Server IP (java):</span> <code>mc.12345em.ru:10012</code>
+                <span>Server IP (bedrock):</span> <code>mc.12345em.ru</code>
+                <p>Warning: Bedrock port is 19132</p>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="feature">
+                <h3>Survival SMP</h3>
+                <p>Classic vanilla-like survival with a focus on community and collaboration.</p>
+            </div>
+            <div class="feature">
+                <h3>Active Community</h3>
+                <p>A friendly and dedicated player base waiting for you.</p>
+            </div>
+            <div class="feature">
+                <h3>No Griefing</h3>
+                <p>Protected land and strict rules to ensure a fair play experience.</p>
+            </div>
+        </section>
+    </main>
+    <div class="instructions-section">
+        <h2>Instructions to join (Bedrock)</h2>
+        <ol>
+            <li>Open Minecraft Bedrock Edition.</li>
+            <li>Click Play.</li>
+            <li>Click Servers</li>
+            <li>Click Add server</li>
+            <li>Add a new server with the provided IP address.</li>
+            <li>Join the server and start your adventure!</li>
+        </ol>
+    </div>
+    <div class="instructions-section">
+        <h2>Instructions to join (Bedrock/Phone/PC) (Second Method)</h2>
+        <ol>
+            <li>Open Minecraft Bedrock Edition.</li>
+            <li>Click Play.</li>
+            <li>Click Friends.</li>
+            <li>Click Find players.</li>
+            <li>Add a friend named Coolpython50.</li>
+            <li>Join the world and start your adventure!</li>
+        </ol>
+    </div>
+    <div class="instructions-section">
+        <h2>Instructions to join (Java)</h2>
+        <ol>
+            <li>Open Minecraft Java Edition.</li>
+            <li>Go to the multiplayer menu.</li>
+            <li>Add a new server using the given IP address and port.</li>
+            <li>Connect to the server and enjoy!</li>
+        </ol>
+    </div>
+    <footer>
+        <p>&copy; 2026 SurvivalCraft. Not an official Minecraft product.</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.server-ip code').forEach(element => {
+            element.addEventListener('click', function() {
+                const text = this.textContent;
+                navigator.clipboard.writeText(text).then(function() {
+                    // Add pulse animation
+                    element.classList.add('copied');
+                    
+                    // Show notification
+                    const notification = document.createElement('div');
+                    notification.className = 'copy-notification';
+                    notification.textContent = '✓ IP Copied!';
+                    document.body.appendChild(notification);
+                    
+                    setTimeout(() => {
+                        element.classList.remove('copied');
+                    }, 600);
+                    
+                    setTimeout(() => {
+                        notification.remove();
+                    }, 2000);
+                }).catch(function(err) {
+                    console.error('Failed to copy:', err);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

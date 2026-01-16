@@ -1,0 +1,275 @@
+body {
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1587573089734-09cb69c0f2b4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    font-family: 'VT323', monospace;
+}
+
+header h1 {
+    font-size: 5rem;
+    margin: 0;
+    text-shadow: 4px 4px #333;
+}
+
+header p {
+    font-size: 1.5rem;
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.server-ip {
+    background-color: #333;
+    padding: 20px;
+    display: inline-block;
+    border-radius: 8px;
+    margin-top: 20px;
+    border: 2px solid #555;
+}
+
+.server-ip code {
+    font-size: 1.2rem;
+    color: #4caf50;
+    font-family: 'VT323', monospace;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.feature {
+    background-color: #2a2a2a;
+    padding: 30px;
+    border-radius: 12px;
+    border-bottom: 4px solid #4caf50;
+}
+
+.feature h3 {
+    color: #4caf50;
+    font-family: 'VT323', monospace;
+    font-size: 1.8rem;
+    margin-top: 0;
+}
+
+/* Instructions section styles */
+.instructions-section {
+    max-width: 1000px;
+    margin: 60px auto 40px;
+    padding: 40px;
+    background-color: #2a2a2a;
+    border-radius: 12px;
+    border-left: 4px solid #4caf50;
+}
+
+.instructions-section h2 {
+    color: #4caf50;
+    font-size: 2rem;
+    margin-top: 0;
+    text-align: center;
+}
+
+.instructions-section ol {
+    list-style-position: inside;
+    padding: 20px;
+    font-size: 1.1rem;
+    line-height: 2;
+}
+
+.instructions-section li {
+    margin-bottom: 15px;
+    padding-left: 10px;
+}
+
+.instructions-section li:before {
+    color: #4caf50;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 40px;
+    background-color: #111;
+    color: #777;
+    font-size: 0.9rem;
+}
+
+/* Text styles */
+h1, h2, h3 {
+    font-family: 'VT323', monospace;
+}
+
+p {
+    line-height: 1.6;
+}
+
+/* Button container styles */
+.button-container {
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* Button styles */
+button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.7);
+    }
+    50% {
+        box-shadow: 0 0 0 10px rgba(76, 175, 80, 0);
+    }
+}
+
+@keyframes glow {
+    0%, 100% {
+        text-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+    }
+    50% {
+        text-shadow: 0 0 20px rgba(76, 175, 80, 1);
+    }
+}
+
+header {
+    animation: fadeInDown 0.8s ease-out;
+}
+
+header h1 {
+    font-size: 5rem;
+    margin: 0;
+    text-shadow: 4px 4px #333;
+    animation: glow 3s ease-in-out infinite;
+}
+
+.hero {
+    animation: slideInUp 0.8s ease-out 0.2s both;
+}
+
+.feature {
+    animation: slideInUp 0.8s ease-out both;
+}
+
+.feature:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+.feature:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.feature:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+.instructions-section {
+    animation: slideInUp 0.8s ease-out;
+}
+
+.server-ip code {
+    font-size: 1.2rem;
+    color: #4caf50;
+    font-family: 'VT323', monospace;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-block;
+    animation: scaleIn 0.6s ease-out;
+}
+
+.server-ip code:hover {
+    transform: scale(1.05);
+    text-shadow: 0 0 10px rgba(76, 175, 80, 0.8);
+}
+
+.server-ip code.copied {
+    animation: pulse 0.6s ease-out;
+}
+
+.copy-notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #4caf50;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    animation: slideInUp 0.4s ease-out;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.4);
+}
+
+.copy-notification.hide {
+    animation: fadeInDown 0.4s ease-out reverse;
+}
