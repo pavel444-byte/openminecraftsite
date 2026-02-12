@@ -29,11 +29,11 @@
 
         <section class="trailer">
             <h2>Трейлер сервера</h2>
-            <video width="320" height="240" controls>
-            <source src="static/Trailer.mp4" type="video/mp4">
-            <source src="static/Trailer.ogg" type="video/ogg">
+            <video controls>
+                <source src="{{ url_for('static', filename='Trailer.mp4') }}" type="video/mp4">
+                <source src="{{ url_for('static', filename='Trailer.ogg') }}" type="video/ogg">
+                Ваш браузер не поддерживает видео.
             </video>
-
         </section>
 
         <section class="features">
