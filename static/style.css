@@ -273,3 +273,37 @@ header h1 {
 .copy-notification.hide {
     animation: fadeInDown 0.4s ease-out reverse;
 }
+
+/* Video container styles */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+    border-radius: 12px;
+    margin: 40px 0;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.trailer {
+    text-align: center;
+    margin-bottom: 60px;
+    animation: slideInUp 0.8s ease-out 0.3s both;
+}
+
+.trailer h2 {
+    color: #4caf50;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
