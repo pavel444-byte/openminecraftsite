@@ -14,6 +14,11 @@ header {
     text-align: center;
     padding: 100px 20px;
     font-family: 'VT323', monospace;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
 }
 
 header h1 {
@@ -287,7 +292,7 @@ header h1 {
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
-.video-container iframe {
+.video-container video {
     position: absolute;
     top: 0;
     left: 0;
@@ -306,14 +311,4 @@ header h1 {
     color: #4caf50;
     font-size: 2.5rem;
     margin-bottom: 20px;
-}
-
-.trailer video {
-    width: 100%;
-    max-height: 500px;
-    object-fit: contain;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-    border: 2px solid #333;
-    background-color: #000;
 }
