@@ -1,0 +1,1 @@
+Hello, This project is archived by a rason which do not allow to commit new changes and server has an event so we can't update it. Thank you for using openminecraftsite soon will be released a new version with
